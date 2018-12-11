@@ -2,17 +2,11 @@ rule Arkei : Arkei
 {
    meta:
       Author = "Fumik0_"
-      Description = "Rule to detect Arkei"
+      Description = "Rule to detect Arkei 9.?.?"
       Date = "2018/12/11"
 
    strings:
       $mz = { 4D 5A }
-
-      $s1 = "Arkei" wide ascii
-      $s2 = "/server/gate" wide ascii
-      $s3 = "/server/grubConfig" wide ascii
-      $s4 = "\\files\\" wide ascii
-      $s5 = "SQLite" wide ascii
 
       $x1 = "/c taskkill /im" wide ascii
       $x2 = "screenshot.jpg" wide ascii
@@ -23,6 +17,5 @@ rule Arkei : Arkei
       $x7 = "[Processes]" wide ascii
 
    condition:
-      $mz at 0 and 
-      ( (all of ($s*)) or (all of ($x*)) )
+      $mz at 0 and (all of ($x*)) 
 }
