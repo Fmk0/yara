@@ -2,8 +2,9 @@ rule Arkei : Arkei
 {
    meta:
       Author = "Fumik0_"
-      Description = "Rule to detect Arkei 9.?.?"
+      Description = "Rule to detect Arkei 9.X.X"
       Date = "2018/12/11"
+      Update = "2018/12/20"
 
    strings:
       $mz = { 4D 5A }
@@ -16,6 +17,8 @@ rule Arkei : Arkei
       $x6 = "[Network]" wide ascii
       $x7 = "[Processes]" wide ascii
 
+      $hx1 = { 56 00 69 00 64 00 61 00 72 00 2E 00 63 00 70 00 70 00 }
+
    condition:
-      $mz at 0 and (all of ($x*)) 
+      $mz at 0 and (all of ($x*)) and not $hx1
 }
