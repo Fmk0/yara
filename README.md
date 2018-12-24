@@ -7,4 +7,5 @@ Created during some investigations
 | Predator The Thief | Stealer, Loader |
 | Kpot | Stealer, Loader |
 | Rarog | Miner, Loader |
+| Vidar | Stealer, Loader |
 
