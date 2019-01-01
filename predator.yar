@@ -3,7 +3,7 @@ rule Predator_The_Thief : Predator_The_Thief {
         description = "Yara rule for Predator The Thief v2.3.5 & +"
         author = "Fumik0_"
         date = "2018/10/12"
-        update = "2018/12/19"
+        update = "2019/01/01"
 
     strings:
         $mz = { 4D 5A }
@@ -24,8 +24,21 @@ rule Predator_The_Thief : Predator_The_Thief {
         $x4 = { C6 84 24 ?? ?? 00 00 03 }  
         $x5 = { C6 84 24 ?? ?? 00 00 B4 } 
         $x6 = { C6 84 24 ?? ?? 00 00 80 }
- 
+
+        // V3.0.3
+        $y1 = { B8 00 E1 F5 05 }
+        $y2 = { 89 5C 24 0C } 
+        $y3 = { FF 44 24 ?? }
+        $y4 = { 39 44 24 0C }  
+        $y5 = { BF 00 00 A0 00 }
+
     condition:
         $mz at 0 and 
-        ( ( all of ($hex*) and all of ($s*) ) or (all of ($x*)))
+        ( 
+             ( all of ($hex*) and all of ($s*) ) 
+             or 
+             ( all of ($x*))
+             or 
+             (all of ($y*)) 
+        )
 }
