@@ -8,7 +8,7 @@ rule kpot {
     strings:
         $mz = { 4d 5a }
 
-        # Variant 1
+        // Variant 1
         $v1_s1 = "GET %s HTTP/1.1" wide ascii
         $v1_s2 = "Host: %s" wide ascii
         $v1_s3 = "%02d-%02d-%02d %d:%02d:%02d" wide ascii
@@ -25,7 +25,7 @@ rule kpot {
         $v1_s14 = "regbot.php" wide ascii
         $v1_s15 = "ip.php" wide ascii
 
-        # Variant 2
+        // Variant 2
         $v2_s1 = "GET %s HTTP/1.1" wide ascii
         $v2_s2 = "%s/%s.php" wide ascii
         $v2_s3 = "%s/gate.php" wide ascii
