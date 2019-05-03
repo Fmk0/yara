@@ -7,6 +7,7 @@ Created during some investigations
 | Immortal Stealer | Stealer |
 | Megumin Trojan | Loader, Clipper, Miner, DDoS |
 | Predator The Thief | Stealer, Loader |
+| Qulab | Stealer, Clipper |
 | Kpot | Stealer, Loader |
 | Rarog | Miner, Loader |
 | Revenge | Rat |
