@@ -5,6 +5,7 @@ Created during some investigations
 |--|--|
 | Arkei | Stealer, Loader |
 | Immortal Stealer | Stealer |
+| Megumin Trojan | Loader, Clipper, Miner, DDoS |
 | Predator The Thief | Stealer, Loader |
 | Kpot | Stealer, Loader |
 | Rarog | Miner, Loader |
