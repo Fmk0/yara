@@ -11,6 +11,7 @@ Created during some investigations
 | Kpot | Stealer, Loader |
 | Rarog | Miner, Loader |
 | Revenge | Rat |
+| StarStealer | Stealer |
 | Supreme++ | Miner, Loader |
 | Vidar | Stealer, Loader |
 
