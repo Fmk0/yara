@@ -7,6 +7,30 @@ rule Vidar_Stealer : Vidar
     strings:
         $mz = { 4D 5A }
 
+        $s1  = "Versions: %s" wide ascii
+        $s2  = "files\\Soft\\Authy" wide ascii
+        $s3  = "Soft: The Bat!" wide ascii
+        $s4  = "Password: %s" wide ascii
+        $s5  = "nss3.dll" wide ascii
+        $s6  = "msvcp140.dll" wide ascii
+        $s7  = "mozglue.dll" wide ascii
+        $s8  = "freebl3.dll" wide ascii
+        $s9  = "vcruntime140.dll" wide ascii
+        $s10 = "softokn3.dll" wide ascii
+        
+    condition:
+        $mz at 0 and ( (all of ($s*)) )
+}
+
+rule Vidar_variant_1 : Vidar 
+{
+    meta:
+        description = "Yara rule for detecting Vidar stealer - First official versions"
+        author = "Fumik0_"
+
+    strings:
+        $mz = { 4D 5A }
+
         $s1 = { 56 69 64 61 72 }
         $s2 = { 31 42 45 46 30 41 35 37 42 45 31 31 30 46 44 34 36 37 41 }
     condition:
